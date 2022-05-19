@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: grey;
+  display: block;
 }
 
 .App-logo {
@@ -35,4 +37,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1{
+  color: blue;
+}
+
+footer{
+  background-color: lightblue;
+  padding: 20px;
+  position: relative;
+  bottom: -30px;
+  width: 100%;
 }
