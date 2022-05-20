@@ -1,7 +1,7 @@
+
 .App {
   text-align: center;
-  background-color: grey;
-  display: block;
+  
 }
 
 .App-logo {
@@ -43,10 +43,11 @@ h1{
   color: blue;
 }
 
-footer{
-  background-color: lightblue;
-  padding: 20px;
-  position: relative;
-  bottom: -30px;
-  width: 100%;
+
+
+li.done {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  color: #0000007a;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }

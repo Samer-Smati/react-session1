@@ -1,7 +1,9 @@
 import React from "react";
 import { Button, Container, Form, FormControl, Nav, Navbar, NavDropdown } from "react-bootstrap";
-
+import {filterDone} from '../redux/action'
+import { useDispatch } from 'react-redux';
 function NavBar() {
+  const dispatch = useDispatch()
   return (
     <div className="mb-3">
       <Navbar bg="light" expand="lg">
@@ -31,13 +33,11 @@ function NavBar() {
               </Nav.Link>
             </Nav>
             <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
+            <Form.Select aria-label="Default select example" onChange={e => dispatch(filterDone(e.target.value)) }>
+              <option value={0}>Filter By</option>
+              <option value={true}>Done</option>
+              <option value={false}>Is not done</option>
+            </Form.Select>
             </Form>
           </Navbar.Collapse>
         </Container>
